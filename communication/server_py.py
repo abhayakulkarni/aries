@@ -5,7 +5,7 @@ import Adafruit_DHT
 
 
 HOST = '192.168.1.4'  # Standard loopback interface address (localhost)
-PORT = 65432        # Port to listen on (non-privileged ports are > 1023)
+PORT = 65433       # Port to listen on (non-privileged ports are > 1023)
 
 
 def random_data():

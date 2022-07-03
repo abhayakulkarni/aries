@@ -3,8 +3,8 @@ import numpy as np
 import encodings
 
 
-HOST = '127.0.0.1'
-PORT = 65432
+HOST = '172.29.62.243'
+PORT = 65433
 
 
 def random_data():

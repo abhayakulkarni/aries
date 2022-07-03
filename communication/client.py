@@ -3,8 +3,8 @@ import threading
 import time
 
 
-HOST = '192.168.0.111'
-PORT = 65432
+HOST = '172.29.62.243'
+PORT = 65433
 
 
 
@@ -19,7 +19,7 @@ def my_client():
 		s.connect((HOST, PORT))
 		
 		my = input("Enter Command")
-
+		#my = "data"
 		my_inp =  my.encode('utf-8')
 		s.sendall(my_inp)
 		data = s.recv(1024).decode('utf-8')
@@ -31,6 +31,6 @@ def my_client():
 		s.close()
 		time.sleep(5)
 
-if __name__ == "__main__"
+if __name__ == "__main__": 
 	while 1:
 		my_client()
