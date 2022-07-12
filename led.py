@@ -1,4 +1,5 @@
 import neopixel
+<<<<<<< HEAD
 from rpi_ws281x import Color, PixelStrip, ws
 import time
 import board
@@ -7,13 +8,29 @@ pixel_pin = board.D18
 num_pixels = 9
 # LED strip configuration:
 LED_COUNT      = 9      # Number of LED pixels.
+=======
+from rpi_ws281x import Color, PixelStrip
+import time
+import board
+ 
+pixel_pin = board.D18
+num_pixels = 8
+# LED strip configuration:
+LED_COUNT      = 8      # Number of LED pixels.
+>>>>>>> d93f61b701c4059eb2caeb3dc874f6a66538baea
 LED_PIN        = 18      # GPIO pin connected to the pixels (18 uses PWM!).
 #LED_PIN        = 10      # GPIO pin connected to the pixels (10 uses SPI /dev/spidev0.0).
 LED_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_DMA        = 10      # DMA channel to use for generating signal (try 10)
+<<<<<<< HEAD
 LED_BRIGHTNESS = 180     # Set to 0 for darkest and 255 for brightest
 LED_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
 LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
+=======
+LED_BRIGHTNESS = 255     # Set to 0 for darkest and 255 for brightest
+LED_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
+LED_CHANNEL    = 0      # set to '1' for GPIOs 13, 19, 41, 45 or 53
+>>>>>>> d93f61b701c4059eb2caeb3dc874f6a66538baea
 
 
 ORDER = neopixel.RGB
@@ -50,7 +67,11 @@ def slowblink(color,wait):
 	pixels.fill((0,0,0))
 	pixels.show()
 	time.sleep(wait) 
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> d93f61b701c4059eb2caeb3dc874f6a66538baea
 def fastpulsing(color,wait):
 	pixels.fill(color)
 	pixels.show()
@@ -68,16 +89,25 @@ if __name__ == '__main__':
 	while True:
 
 		#green chasing 
+<<<<<<< HEAD
 		chasing(strip, Color(0,255,0))
 		for i in range(0,LED_COUNT):	
 			colorWipe(strip, Color(0,255,0))
 			time.sleep(3)
 
+=======
+#		chasing(strip, Color(0,255,0))
+#		for i in range(0,LED_COUNT):	
+#			colorWipe(strip, Color(0,255,0))
+#			time.sleep(3)
+#		time.sleep(30)	
+>>>>>>> d93f61b701c4059eb2caeb3dc874f6a66538baea
 	
 		#yellow chasing
 #		chasing(strip, Color(255,255,0))
 #		for i in range(0, LED_COUNT):
 #			colorWipe(strip, Color(255,255,0))
+<<<<<<< HEAD
 
 
 		#yellow fadeinout		
@@ -100,3 +130,34 @@ if __name__ == '__main__':
 		#green slow blinking
 #		for blink in range(5):
 #			fastpulsing((255,0,0),1)
+=======
+#		time.sleep(30)
+
+		#yellow fadeinout		
+#		for i in range (1000):
+#			fadeinout()
+#			i = i+1  
+#			strip.setBrightness(0)
+#		time.sleep(30)			
+		
+	
+
+	#purple slow pulsing 	
+#		for blinks in range(1000):
+#			slowblink((128,0,128), 1)
+#		time.sleep(30)
+
+		#red fast pulsing
+		for blinks in range(100000):
+			fastpulsing((0,255,0), 0.2)
+		time.sleep(30)
+		#blue fast pulsing
+		for blinks in range(1000):
+			fastpulsing((0,0,255), 0.2)
+
+		time.sleep(30)
+		#green slow blinking
+		for blink in range(5):
+			fastpulsing((255,0,0),1)
+ 
+>>>>>>> d93f61b701c4059eb2caeb3dc874f6a66538baea
