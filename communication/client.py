@@ -12,6 +12,7 @@ def process_data_from_server(x):
     return x1,y1
 
 
+
 def my_client():
     threading.Timer(11, my_client).start()
 
@@ -35,8 +36,7 @@ def my_client():
 
         s.close()
         time.sleep(5)
-
-
+		
 if __name__ == "__main__":
     while 1:
         my_client()
