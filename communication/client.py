@@ -3,8 +3,8 @@ import threading
 import time
 
 
-HOST = '172.29.62.243'  # The server's hostname or IP address
-PORT = 65434      # The port used by the server
+HOST = '172.29.55.198'  # The server's hostname or IP address
+PORT = 65435      # The port used by the server
 
 
 def process_data_from_server(x):
@@ -36,7 +36,7 @@ def my_client():
 
         s.close()
         time.sleep(5)
-		
+
 if __name__ == "__main__":
     while 1:
         my_client()
