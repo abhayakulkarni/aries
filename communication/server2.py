@@ -1,5 +1,5 @@
 import socket
-from unicodedata import name
+#from unicodedata import name
 s = socket.socket()
 print('socket created')
 
@@ -16,3 +16,5 @@ while True:
     c.send(bytes('welcome to ARIES', 'utf-8'))
 
     c.close()
+    with open('socket data', 'w') as f:
+        f.write(name)
