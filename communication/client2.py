@@ -7,7 +7,7 @@ import socket
 
 c = socket.socket()
 
-c.connect(('172.29.55.198',9999))
+c.connect(('172.29.3.60',9999))
 
 name = input("Enter your name")
 c.send(bytes(name,'utf-8'))
